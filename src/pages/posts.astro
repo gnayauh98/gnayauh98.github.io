@@ -1,0 +1,19 @@
+---
+import WithHeaderLayout from "../layouts/WithHeaderLayout.astro";
+
+import { getCollection } from "astro:content";
+const posts = await getCollection("posts");
+---
+
+<WithHeaderLayout>
+  <div>博客</div>
+  <div>
+    {
+      posts.map((post) => (
+        <li>
+          <a href={`/posts/${post.id}`}>{post.data.title}</a>
+        </li>
+      ))
+    }
+  </div>
+</WithHeaderLayout>
