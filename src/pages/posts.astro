@@ -6,14 +6,7 @@ const posts = await getCollection("posts");
 ---
 
 <WithHeaderLayout>
-  <div>博客</div>
-  <div>
-    {
-      posts.map((post) => (
-        <li>
-          <a href={`/posts/${post.id}`}>{post.data.title}</a>
-        </li>
-      ))
-    }
+  <div class="grid cols-24 max-w-768px mx-auto gap-1em">
+    {posts.map((post) => <a class=" aspect-ratio-[16/9] col-span-8" href={`/posts/${post.id}`}>{post.data.title}</a>)}
   </div>
 </WithHeaderLayout>

@@ -19,6 +19,8 @@ const { data } = entry;
 const { Content, headings } = await render(entry);
 
 import Avatar from "../../assets/avatar.png";
+
+import '../../assets/styles/markdown.scss'
 ---
 
 <PostsLayout>
@@ -40,7 +42,7 @@ import Avatar from "../../assets/avatar.png";
       </div>
     </div>
     <div class="grid cols-[1fr_200px]">
-      <div>
+      <div class="markdown-body">
         <Content />
       </div>
       <div class="px-2em">
@@ -51,18 +53,8 @@ import Avatar from "../../assets/avatar.png";
   </div>
 </PostsLayout>
 
-<style>
+<style lang="scss">
   .header-1 {
     font-weight: 600;
-  }
-
-  .posts :global(h2) {
-    font-size: 1.25em;
-    font-weight: 600;
-    border-bottom: 2px solid #ececec;
-  }
-
-  .posts :global(p) {
-    margin: 1em 0;
   }
 </style>

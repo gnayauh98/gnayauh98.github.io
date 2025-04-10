@@ -9,12 +9,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.6.1"
+    "astro": "^5.6.1",
+    "github-markdown-css": "^5.8.1"
   },
   "devDependencies": {
     "@unocss/extractor-mdc": "66.1.0-beta.10",
     "@unocss/reset": "66.1.0-beta.10",
     "@unocss/transformer-variant-group": "66.1.0-beta.10",
+    "sass-embedded": "^1.86.3",
     "unocss": "66.1.0-beta.10"
   },
   "packageManager": "pnpm@10.6.3"
